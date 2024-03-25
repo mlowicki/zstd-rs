@@ -222,6 +222,8 @@ fn compile_zstd() {
     set_legacy(&mut config);
     enable_threading(&mut config);
 
+    config.flag("-mcpu=neoverse-n1");
+
     // Compile!
     config.compile("libzstd.a");
 
